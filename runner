@@ -1,4 +1,4 @@
 #!/bin/bash
 
-make venv 2>&1 /dev/null
-python3 my_hotel_merger/main.py $1 $2
+make venv > /dev/null
+my_hotel_merger $1 $2

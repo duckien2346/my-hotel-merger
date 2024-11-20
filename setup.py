@@ -16,7 +16,7 @@ setup(name='my-hotel-merger',
           'License :: OSI Approved :: GNU Affero General Public License v3',
           'Programming Language :: Python :: 3 :: Only'
       ],
-      python_requires=">=3.7,<3.13",
+      python_requires=">=3.7,<3.14",
       install_requires=[
           'requests==2.32.*'
       ],
