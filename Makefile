@@ -7,5 +7,5 @@ venv:
 
 pylint:
 	. ./venv/bin/activate ;\
-	pylint --rcfile .pylintrc tap_postgres/
+	pylint --rcfile .pylintrc my_hotel_merger/
 
