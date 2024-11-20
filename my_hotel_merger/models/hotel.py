@@ -1,6 +1,7 @@
-from helpers import Helper
+from my_hotel_merger.utils.helpers import Helper
 
 class Location:
+    """Location class for hotel"""
     lat: float | None
     lng: float | None
     address: str | None
@@ -14,6 +15,7 @@ class Location:
         self.country = Helper.format_str(country)
 
 class Amenities:
+    """Amenities class for hotel"""
     general: list[str] | None
     room: list[str] | None
     def __init__(self, general=None, room=None):
@@ -22,6 +24,7 @@ class Amenities:
         self.room = Helper.format_list_str(room, formatters)
 
 class ImageItem:
+    """Image item class for Images"""
     link: str | None
     description: str | None
     def __init__(self, link=None, description=None):
@@ -29,6 +32,7 @@ class ImageItem:
         self.description = Helper.format_str(description)
 
 class Images:
+    """Images class for hotel"""
     rooms: list[ImageItem] | None
     site: list[ImageItem] | None
     amenities: list[ImageItem] | None
@@ -38,21 +42,15 @@ class Images:
         self.amenities = amenities
 
 class Hotel:
-    id: str
+    """Hotel class"""
+    id_: str
     destination_id: int
-    name: str | None
-    location: Location | None
-    description: str | None
-    amenities: Amenities | None
-    images: Images | None
-    booking_conditions: list[str] | None
-    def __init__(self, id, destination_id, name=None, location=None, description=None, amenities=None, images=None, booking_conditions=None):
-        self.id = id
+    name: str | None = None
+    location: Location | None = None
+    description: str | None = None
+    amenities: Amenities | None = None
+    images: Images | None = None
+    booking_conditions: list[str] | None = None
+    def __init__(self, id_: str, destination_id: int) -> None:
+        self.id_ = id_
         self.destination_id = destination_id
-        self.name = Helper.format_str(name)
-        self.location = location
-        self.description = Helper.format_str(description)
-        self.amenities = amenities
-        self.images = images
-        self.booking_conditions = Helper.format_list_str(booking_conditions)
-

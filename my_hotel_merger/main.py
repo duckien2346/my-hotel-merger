@@ -1,9 +1,11 @@
 import argparse
 import json
-from suppliers import Acme, Patagonia, Paperflies
-from hotels_service import HotelsService
+from my_hotel_merger.repositories.suppliers import Acme, Patagonia, Paperflies
+from my_hotel_merger.services.hotels_service import HotelsService
+
 
 def fetch_hotels(hotel_ids, destination_ids):
+    """Fetch hotels from suppliers and return the merged data"""
     # Write your code here
 
     suppliers = [
@@ -26,10 +28,11 @@ def fetch_hotels(hotel_ids, destination_ids):
 
     # Return as json
     return json.dumps(filtered, default=lambda o: o.__dict__)
-    
-def main():
+
+
+def main_impl():
+    """Main function"""
     parser = argparse.ArgumentParser()
-    
     parser.add_argument("hotel_ids", type=str, help="Hotel IDs")
     parser.add_argument("destination_ids", type=str, help="Destination IDs")
 
@@ -42,5 +45,6 @@ def main():
     result = fetch_hotels(hotel_ids, destination_ids)
     print(result)
 
+
 if __name__ == "__main__":
-    main()
+    main_impl()
