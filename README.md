@@ -19,7 +19,9 @@ It's recommended to use a virtualenv:
 
 ```bash
 python3 -m venv venv
-pip install my-hotel-merger
+. ./venv/bin/activate
+pip install --upgrade pip setuptools wheel
+pip install -e .
 ```
 
 or
