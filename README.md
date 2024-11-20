@@ -21,7 +21,7 @@ It's recommended to use a virtualenv:
 python3 -m venv venv
 . ./venv/bin/activate
 pip install --upgrade pip setuptools wheel
-pip install -e .
+pip install .
 ```
 
 or
