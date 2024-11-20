@@ -1,65 +1,115 @@
-# Copy from https://github.com/kubeflow/examples
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# pkg and bin directories currently contain build artifacts
-# only so we exclude them.
-bin/
+# C extensions
+*.so
 
-.vscode/
+# Distribution / packaging
+.Python
+env/
+virtualenvs/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Compiled python files.
-*.pyc
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
 
-# Emacs temporary files
-*~
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Other temporary files
-.DS_Store
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+coverage_report
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
 
-# temporary files from emacs flymd-mode
-flymd.*
+# Translations
+*.mo
+*.pot
 
-# vim .swp files
-*.swp
-*.swo
+# Django stuff:
+*.log
+local_settings.py
 
-# Files created by Gogland IDE
-.idea/
+# Flask stuff:
+instance/
+.webassets-cache
 
-# Exclude wheel files for now.
-# The only wheel file is the TF wheel one which is quite large.
-# We don't want to check that into source control because it could be
-# quite large.
-*.whl
+# Scrapy stuff:
+.scrapy
 
-# Bazel files
-**/bazel-*
-# Examples egg
-examples/tf_sample/tf_sample.egg-info/
-examples/.ipynb_checkpoints/
+# Sphinx documentation
+docs/_build/
 
-**/.ipynb_checkpoints
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
 
 # pyenv
 .python-version
 
-# Data files
-*.h5
-*.dpkl
+# celery beat schedule file
+celerybeat-schedule
 
-# Build directory
-**/build
-github_issue_summarization/build/
+# SageMath parsed files
+*.sage.py
 
-# Don't check in the go vendor directory
-# We can just use the dep tool to install them.
-github_issue_summarization/hp-tune/vendor
+# dotenv
+.env
 
-# Vim
-[._]*.s[a-v][a-z]
-[._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
+# virtualenv
+.venv
+venv/
+ENV/
 
-# Cache
-.cache/
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# Emacs
+.tramp_history
+
+env-vars.txt
+tap_oracle/__pycache__/
+*~
+config.json
+
+
+# JetBrains IDEs
+.idea/*
